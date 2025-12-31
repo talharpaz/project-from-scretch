@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- הגדרות בסיסיות: קידוד ותצוגה במובייל -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+    <!-- כותרת ראשית -->
+    <h1>welcome</h1>
+     <!-- טופס לשליחת שאלה -->
+       <!--id הוא הדרך של JavaScript ו־CSS לזהות אלמנט ספציפי אחד בדף, בלי בלבול -->
+    <form id="questionForm">
+      <label for="questionInput">Write your question:</label>
+      <br />
+      <!-- תיבת טקסט לשאלה -->
+      <textarea
+        id="questionInput"
+        rows="4"
+        cols="40"
+        placeholder="Type here..."
+      ></textarea>
+      <br />
+      <div class="actions">
+        <button type="submit">Send</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </div>
+    </form>
+    <!-- הודעת עזר/שגיאה -->
+    <p id="hint"></p>
+    <!-- אזור תוצאות (מוסתר בהתחלה) -->
+    <div id="result" style="display: none;">
+      <h2>Your question:</h2>
+      <p id="userQuestion"></p>
+    
+      <h2>Answer:</h2>
+      <p id="answer"></p>
+    </div>
+    <section id="historySection">
+      <h2>History</h2>
+      <ul id="historyList"></ul>
+    </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
