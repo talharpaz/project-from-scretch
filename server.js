@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;;
 
 // מאפשר לשרת לקרוא JSON
 app.use(express.json());
@@ -26,5 +26,5 @@ app.post("/ask", (req, res) => {
 
 // הפעלת השרת
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
